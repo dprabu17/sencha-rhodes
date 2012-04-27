@@ -1,0 +1,34 @@
+Sencha Touch 2 Build Mobile Web Apps with HTML5
+
+1. Download SDK from the site http://www.sencha.com/products/touch/download/sencha-touch-2.0.1
+
+2. Create a folder under public/sencha and paste sdk files which are download from the above URL.
+
+3. Create a js file under public/app/app.js
+
+4. Remove entire content and then add the below line in the app/index.erb and
+
+   <!-- Sencha Touch CSS -->
+	<link rel="stylesheet" href="/public/sencha/resources/css/sencha-touch.css" type="text/css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/public/css/sencha.css" type="text/css">
+
+	<!-- Sencha Touch JS -->
+	<script type="text/javascript" src="/public/sencha/sencha-touch-debug.js"></script>
+
+	<!-- Application JS -->
+	<script type="text/javascript" src="/public/app/index.js"></script>
+
+5. Remove the layout.erb and insert the line below
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+            "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <title>Sancha with rhodes</title>
+	</head>
+	<body>
+    	<%= @content %>
+	</body>
+	</html>
